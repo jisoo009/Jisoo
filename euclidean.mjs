@@ -7,6 +7,6 @@ function euclidean(num1, num2) {
     return num1;
 }
 
-//let answer=euclidean(78,66);
+console.log(euclidean(78,66));
 
-console.log(euclidean(1024, 24));
+//console.log(euclidean(1024, 24));
