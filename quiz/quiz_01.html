@@ -4,13 +4,20 @@
 </head>
 <body>
     <script>
-        function solution(){
-            let answer;
-            console.log("Hello");
-
+        function solution(n){
+            let answer="";
+            function recursion(n){
+                if(n===0) return;  //기저 조건
+                else {              //재귀 호출
+                    recursion(parseInt(n/2));
+                    //console.log(n%2);
+                    answer += String(n%2);
+                }
+            }
+            recursion(n);
             return answer;
         }
-        console.log(solution());
+        console.log(solution(13));
     </script>
 </body>
 </html>

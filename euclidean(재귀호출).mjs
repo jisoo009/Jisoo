@@ -18,6 +18,6 @@ console.log(euclidean(78, 66));
 // }
 // (조건) ? 1: 2;
 
-const euclieadn =function(num1, num2) => (num===0) ? num1:euclieadn(num2, num1 % num2);
+const euclieadn = function(num1, num2) { (num===0) ? num1:euclieadn(num2, num1 % num2);}
 console.log(euclidean(78, 66));
 
