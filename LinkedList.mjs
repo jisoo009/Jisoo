@@ -85,7 +85,7 @@ getNodeAt(index){
         for (let i = 0; i < index; i++) {
             currentNode = currentNode.next;
         } 
-        return this.getNodeAt;
+        return currentNode;
 
     }
 
