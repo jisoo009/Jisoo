@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>stack - 괄호 안에 있는 문자열 제거</title>
+</head>
+<body>
+    <script>
+        // function solution(str){
+        //     let answer="";
+        //     let stack=[];
+
+        //     for(let x of str){
+        //         console.log(x);
+        //         if(x==="(") 
+        //             stack.pop("(");
+                
+        //         else (stack.length===str) 
+        //             stack.push();
+    
+        //     }
+        //     return answer;
+        // }
+        // let str="(A(BC)D)EF(G(H)(IJ)K)SM(N))";
+        // console.log(solution(str));
+
+        function solution(str){
+            let answer="";
+            let stack=[];
+
+            for(let x of str){
+                //console.log(x);
+                if(x===')') {
+                    while ( stack.push()!=='(');
+                }
+                else stack.push(x);
+            
+            }
+            //console.log(stack);
+            answer=stack.join('');
+            return answer;
+        }
+        let str="(A(BC)D)EF(G(H)(IJ)K)SM(N))";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
