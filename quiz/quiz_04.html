@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>stack - 괄호 맟춤법 검사기 </title>
+</head>
+<body>
+    <script>
+        // function solution(s){
+        //     let answer;
+        //     for(let i=0;i<s.length;i++){
+        //         if(i%2==0){
+        //             console.log("Yes");
+        //         }
+        //         else{
+        //             console.log("No");
+        //         }
+        //     }
+        //     return answer;
+        // }
+        
+        // let a="()";
+        // console.log(solution(a));
+
+
+        function solution(s){
+            let answer="Yes";
+            let stack=[];
+            for(let x of s){
+                console.log(x);
+                if(x==='('){
+                    stack.push(x);
+                }
+                else{
+                    if(stack.length===0) return "No";
+                    stack.pop();
+                }
+            }
+            if(stack.length>0)return "No";
+            return answer;
+        }
+        
+        let a="()(";
+        console.log(solution(a));
+    </script>
+</body>
+</html>
