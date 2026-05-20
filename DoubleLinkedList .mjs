@@ -113,7 +113,7 @@ class DoubleLinkedList {
 
 deleteLast(){
    // this.deleteAt(4);
-    this.deleteAt(this.count-1);
+   return this.deleteAt(this.count-1);
 }
 
 getNodeAt(index){
