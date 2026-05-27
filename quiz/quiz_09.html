@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>큐 - 필수교육과정 설계</title>
+</head>
+<body>
+    <script>
+        function solution(need, plan){
+            let answer = "Yes";
+            let queue = need.split('');
+
+            //console.log(queue);
+          //  console.log(queue.join(''));
+            
+            for(let x of plan){
+               // console.log(x);
+
+               if(queue.includes(x)){
+                    if(x!==queue.shift()){
+                        return "No";
+                    }
+                }
+            }
+
+            if(queue.length > 0) return "No";
+        
+
+            return answer;
+            
+        }
+        let a = "CBA";
+        let b = "CBDAGE";       //Yes
+        let c = "CBDGE";        //NO
+        let d = "CADBGE";       //No
+        console.log(solution(a, d));
+    </script>
+</body>
+</html>
