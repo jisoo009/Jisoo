@@ -1,0 +1,42 @@
+import DoubleLinkedList from "./DoubleLinkedList.mjs";
+
+class Deque{
+
+    constructor(){
+        this.list = new DoubleLinkedList();
+    }
+
+    printAll(){
+        this.list.printAll();
+    }
+
+    addFirst(data){
+        this.list.insertAt(0, data);
+    }
+
+    removeFirst(){
+        try{
+            this.list.deleteAt(0);
+        }catch(e){
+            return null;
+        }
+    }
+
+    addLast(data){
+        this.list.insertLast(data);
+    }
+
+    removerLast(){
+        try{
+            return this.list.deleteLast();
+        }catch(e){
+            return null;
+        }
+    }
+
+    isEmpty(){
+        retrun (this.list.count===0);
+    }
+}
+
+export {Deque};
