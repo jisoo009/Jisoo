@@ -1,4 +1,4 @@
-import DoubleLinkedList from "./DoubleLinkedList.mjs";
+import { DoubleLinkedList } from "./DoubleLinkedList.mjs";
 
 class Deque{
 
@@ -26,7 +26,7 @@ class Deque{
         this.list.insertLast(data);
     }
 
-    removerLast(){
+    removeLast(){
         try{
             return this.list.deleteLast();
         }catch(e){
@@ -35,7 +35,7 @@ class Deque{
     }
 
     isEmpty(){
-        retrun (this.list.count===0);
+        return (this.list.count===0);
     }
 }
 

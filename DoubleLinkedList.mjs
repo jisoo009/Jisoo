@@ -16,16 +16,15 @@ class DoubleLinkedList {
     printAll() {
         let currentNode = this.head;
         let text = "[";
-        while (currentNode != null) {
+        while (currentNode!=null) {
            // console.log(currentNode.data);
             text += currentNode.data;
             currentNode = currentNode.next;
-            if (currentNode != null) text += ","
+            if (currentNode!=null) text += ","
         }
         text += "]";
         console.log(text);
     }
-
 
     clear() {
         this.head = null;
@@ -39,7 +38,7 @@ class DoubleLinkedList {
         let newNode = new Node(data);
         if (index === 0) {
             newNode.next = this.head;
-            if(this.head !== null){
+            if(this.head!==null){
                 this.head.prev = newNode;
             }
             this.head = newNode;
@@ -47,11 +46,11 @@ class DoubleLinkedList {
         else if(index === this.count){
             newNode.next = null;
             newNode.prev = this.tail;
-            this.tail = newNode;
+            this.tail.next = newNode;
         }
         else {
             let currentNode = this.head;
-            for (let i = 0; i < index - 1; i++) {
+            for (let i = 0; i < index-1; i++) {
                 currentNode = currentNode.next;
             } 
             newNode.next = currentNode.next;
@@ -63,7 +62,6 @@ class DoubleLinkedList {
         if(newNode.next === null){
             this.tail = newNode;
         }
-       
         this.count++;
     }
 
@@ -76,11 +74,11 @@ class DoubleLinkedList {
             throw new Error("범위를 벗어났습니다.");
         }
 
-        let currentNode =this.head;
+        let currentNode = this.head;
         if(index === 0){
             let deleteNode = this.head;
 
-            if(this.head.next == null){         //노드가 1개
+            if(this.head.next === null){         //노드가 1개
                 this.head = null;
                 this.tail = null;
             }
@@ -113,7 +111,7 @@ class DoubleLinkedList {
 
 deleteLast(){
    // this.deleteAt(4);
-   return this.deleteAt(this.count-1);
+    return this.deleteAt(this.count-1);
 }
 
 getNodeAt(index){
@@ -127,7 +125,6 @@ getNodeAt(index){
         return currentNode;
 
     }
-
 }
 
 export { Node, DoubleLinkedList };
