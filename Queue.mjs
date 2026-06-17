@@ -24,6 +24,7 @@ class Queue{
     }
 
     isEmpty(){
+        
         return (this.list.count === 0)
     }
 }
